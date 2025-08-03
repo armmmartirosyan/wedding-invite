@@ -15,15 +15,16 @@
   justify-content: center;
 }
 
+.container:nth-child(2) {
+  & .image {
+    transform: translateY(5rem) !important;
+  }
+}
+
 .image {
   width: 12rem;
   height: 45rem;
   object-fit: cover;
-
-  &:nth-child(2) {
-    position: relative;
-    top: 5rem;
-  }
 }
 
 .invite {
@@ -39,4 +40,9 @@
   height: 4.3rem;
   color: var(--gold);
   cursor: pointer;
+}
+
+.invite_wrapper {
+  width: fit-content;
+  margin: 0 auto;
 }

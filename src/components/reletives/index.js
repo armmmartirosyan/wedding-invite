@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { opacityScale } from "@/utils";
 import styles from "./index.module.css";
 
 export function Reletives() {
@@ -13,8 +17,18 @@ export function Reletives() {
       </p>
       <p className={`heading ${styles.date}`}>20.08.2025</p>
       <figure className={styles.image_box}>
-        <img src={"/reletives1.jpg"} className={styles.image} alt="They" />
-        <img src={"/reletives2.jpg"} className={styles.image} alt="They" />
+        <motion.div
+          className={styles.container}
+          {...opacityScale({ duration: 0.5, once: true })}
+        >
+          <img src={"/reletives1.jpg"} className={styles.image} alt="They" />
+        </motion.div>
+        <motion.div
+          className={styles.container}
+          {...opacityScale({ duration: 0.5, once: true })}
+        >
+          <img src={"/reletives2.jpg"} className={styles.image} alt="They" />
+        </motion.div>
       </figure>
     </section>
   );

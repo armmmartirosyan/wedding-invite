@@ -3,6 +3,7 @@
 import { sendEmail } from "@/actions";
 import styles from "./index.module.css";
 import { useRef } from "react";
+import { LettersPullUp } from "../letters-pull-up";
 
 export function Form() {
   const formRef = useRef(null);
@@ -92,7 +93,9 @@ export function Form() {
       <button className={styles.submit} type="submit">
         Ուղարկել
       </button>
-      <p className={styles.happy_end}>Սիրով սպասում ենք Ձեզ</p>
+      <LettersPullUp duration={1} className={styles.happy_end}>
+        Սիրով սպասում ենք Ձեզ
+      </LettersPullUp>
     </form>
   );
 }
