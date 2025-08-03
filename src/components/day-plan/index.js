@@ -34,14 +34,14 @@ export function DayPlan() {
       {/* Ekexeci */}
       <Link href="#" className={styles.link}>
         <img src="/church.svg" alt="Church" className={styles.image} />
-        <LettersPullUp duration={1} className={styles.place_name}>
+        <LettersPullUp duration={0.7} className={styles.place_name}>
           ՊՍԱԿԱԴՐՈՒԹՅՈՒՆ
         </LettersPullUp>
         <p className={styles.time}>14:00</p>
         <p className={styles.name}>Սուրբ Մարիամ Աստվածածին եկեղեցի</p>
         <motion.div
           className={styles.banner}
-          {...opacityScale({ duration: 0.7, once: true })}
+          {...opacityScale({ duration: 0.5, once: true })}
         >
           <img
             src="/church_img.webp"
