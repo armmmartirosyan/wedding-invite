@@ -11,19 +11,19 @@
 .images_block {
   display: flex;
   column-gap: 1rem;
-  margin-bottom: 7rem;
+  margin-bottom: 12rem;
   justify-content: center;
 }
 
 .container:nth-child(2) {
   & .image {
-    transform: translateY(5rem) !important;
+    transform: translateY(8.3rem) !important;
   }
 }
 
 .image {
-  width: 12rem;
-  height: 45rem;
+  width: 19rem;
+  height: 63rem;
   object-fit: cover;
 }
 
@@ -45,4 +45,8 @@
 .invite_wrapper {
   width: fit-content;
   margin: 0 auto;
+}
+
+.title {
+  font-size: 11rem;
 }
