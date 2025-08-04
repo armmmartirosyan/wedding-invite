@@ -98,7 +98,7 @@ export function DayPlan() {
           {...opacityScale({ duration: 0.7, once: true })}
         >
           <img
-            src="/restaurant.PNG"
+            src="/restaurant3.PNG"
             alt="Wife home"
             className={styles.place_img}
           />
