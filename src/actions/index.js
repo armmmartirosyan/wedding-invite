@@ -30,7 +30,7 @@ export async function sendEmail(formData) {
 
   const mailData = {
     from: "'Responded to the invite' <armenmartirosyan020@gmail.com>",
-    to: "armmmartirosyan@mail.ru",
+    to: "armmmartirosyan@mail.ru", //vplg2000@mail.ru
     subject: "Responded to the invite.",
     text: nameSurname,
     html: `<div>${nameSurname}<br>${invitedBy}<br>${willCome}<br>${
