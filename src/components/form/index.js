@@ -9,13 +9,19 @@ export function Form() {
   const formRef = useRef(null);
 
   const handleSubmit = async (formData) => {
-    const { message, success } = await sendEmail(formData);
+    // const { message, success } = await sendEmail(formData);
 
-    if (success) {
-      formRef.current?.reset();
-    }
+    // if (success) {
+    //   formRef.current?.reset();
+    // }
 
-    alert(message);
+    // alert(message);
+    fetch("/api/categories", { method: "post", body: formData.json() }).then(
+      async (res) => {
+        const response = await res.json();
+        alert("response---", response);
+      }
+    );
   };
 
   return (

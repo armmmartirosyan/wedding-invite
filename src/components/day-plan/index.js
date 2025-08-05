@@ -20,7 +20,7 @@ export function DayPlan() {
         <p className={styles.time}>12:30</p>
         <motion.div
           className={styles.banner}
-          {...opacityScale({ duration: 0.7, once: true })}
+          {...opacityScale({ duration: 0.7, once: false })}
         >
           <img
             src="/wife_house_image.jpg"
@@ -50,9 +50,9 @@ export function DayPlan() {
         </p>
         <motion.div
           className={styles.banner}
-          {...opacityScale({ duration: 0.5, once: true })}
+          {...opacityScale({ duration: 0.5, once: false })}
         >
-          <img src="/church-7.jpg" alt="Church" className={styles.place_img} />
+          <img src="/7verk.jpg" alt="Church" className={styles.place_img} />
         </motion.div>
         <p className={styles.address}>Գյումրի, Վարդանանց հրապարակ</p>
         <Link
@@ -72,7 +72,7 @@ export function DayPlan() {
         <p className={styles.time}>15:00</p>
         <motion.div
           className={styles.banner}
-          {...opacityScale({ duration: 0.5, once: true })}
+          {...opacityScale({ duration: 0.5, once: false })}
         >
           <img src="/groom.jpg" alt="Groom" className={styles.place_img} />
         </motion.div>
@@ -95,7 +95,7 @@ export function DayPlan() {
         <p className={styles.name}>Տիգրան Մեծ Համալիր</p>
         <motion.div
           className={styles.banner}
-          {...opacityScale({ duration: 0.7, once: true })}
+          {...opacityScale({ duration: 0.7, once: false })}
         >
           <img
             src="/restaurant3.PNG"

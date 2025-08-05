@@ -19,13 +19,13 @@ export function Reletives() {
       <figure className={styles.image_box}>
         <motion.div
           className={styles.container}
-          {...opacityScale({ duration: 0.5, once: true })}
+          {...opacityScale({ duration: 0.5, once: false })}
         >
           <img src={"/reletives1.jpg"} className={styles.image} alt="They" />
         </motion.div>
         <motion.div
           className={styles.container}
-          {...opacityScale({ duration: 0.5, once: true })}
+          {...opacityScale({ duration: 0.5, once: false })}
         >
           <img src={"/reletives2.jpg"} className={styles.image} alt="They" />
         </motion.div>

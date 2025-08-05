@@ -19,13 +19,13 @@ export function LettersPullUp({
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * 0.05,
+        delay: i * 0.08,
         duration,
       },
     }),
   };
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: false });
 
   return (
     <span className={`${styles.wrapper} ${wrapperClassName}`}>
