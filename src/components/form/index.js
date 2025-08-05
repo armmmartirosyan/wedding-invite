@@ -9,19 +9,32 @@ export function Form() {
   const formRef = useRef(null);
 
   const handleSubmit = async (formData) => {
-    // const { message, success } = await sendEmail(formData);
+    const invitedBy = formData.get("invitedBy") || "";
+    const nameSurname = formData.get("nameSurname") || "";
+    const willCome = formData.get("willCome") || "";
+    const numberOfGuests = formData.get("numberOfGuests") || "";
 
-    // if (success) {
-    //   formRef.current?.reset();
-    // }
+    if (
+      !invitedBy ||
+      !nameSurname ||
+      (willCome === "Մենք կգանք" && !numberOfGuests)
+    ) {
+      alert("Խնդրում ենք լրացնել բոլոր դաշտերը։");
+      return;
+    }
 
-    // alert(message);
-    fetch("/api/categories", { method: "post", body: formData.json() }).then(
-      async (res) => {
-        const response = await res.json();
-        alert("response---", response);
-      }
-    );
+    const { message, success } = await sendEmail({
+      invitedBy,
+      nameSurname,
+      willCome,
+      numberOfGuests,
+    });
+
+    if (success) {
+      formRef.current?.reset();
+    }
+
+    alert(message);
   };
 
   return (
@@ -38,7 +51,6 @@ export function Form() {
           name="invitedBy"
           value="Հարսի կողմ"
           className={styles.radio}
-          required
         />
         <label htmlFor="wife" className={styles.radio_label}>
           Հարսի կողմ
@@ -51,7 +63,6 @@ export function Form() {
           name="invitedBy"
           value="Փեսայի կողմ"
           className={styles.radio}
-          required
         />
         <label htmlFor="fiance" className={styles.radio_label}>
           Փեսայի կողմ
@@ -62,7 +73,6 @@ export function Form() {
         type="text"
         className={styles.input}
         placeholder="Անուն Ազգանուն"
-        required
       />
       <div className={styles.radio_wrapper}>
         <input

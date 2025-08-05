@@ -5,19 +5,12 @@ import nodemailer from "nodemailer";
 const user = process.env.NEXT_PUBLIC_EMAIL_USER_NAME;
 const pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
 
-export async function sendEmail(formData) {
-  const invitedBy = formData.get("invitedBy") || "";
-  const nameSurname = formData.get("nameSurname") || "";
-  const willCome = formData.get("willCome") || "";
-  const numberOfGuests = formData.get("numberOfGuests") || "";
-
-  if (!invitedBy || !nameSurname || !willCome) {
-    return {
-      message: "Խնդրում ենք լրացնել բոլոր դաշտերը։",
-      success: false,
-    };
-  }
-
+export async function sendEmail({
+  invitedBy,
+  nameSurname,
+  willCome,
+  numberOfGuests,
+}) {
   const transporter = nodemailer.createTransport({
     secure: true,
     host: "smtp.gmail.com",
@@ -33,8 +26,8 @@ export async function sendEmail(formData) {
     to: "armmmartirosyan@mail.ru", //vplg2000@mail.ru
     subject: "Responded to the invite.",
     text: nameSurname,
-    html: `<div>${nameSurname}<br>${invitedBy}<br>${willCome}<br>${
-      willCome === "Մենք կգանք" && "Մենք կգանք` " + numberOfGuests
+    html: `<div>Անուն՝ ${nameSurname}<br>Հրավիրված՝ ${invitedBy}ից<br>${willCome}${
+      willCome === "Մենք կգանք" && "՝ " + numberOfGuests
     }</div>`,
   };
 
@@ -47,5 +40,8 @@ export async function sendEmail(formData) {
     };
   }
 
-  return { success: true, message: "success" };
+  return {
+    success: true,
+    message: "Շնորհակալություն հրավերին պատասխանելու համար։",
+  };
 }
