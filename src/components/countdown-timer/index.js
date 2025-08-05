@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo, Fragment } from "react";
 import styles from "./index.module.css";
 
 const calculateTimeLeft = (targetDate) => {
-  const difference = +new Date(targetDate) - +new Date();
+  const difference = new Date(targetDate) - new Date();
   let timeLeft = [];
 
   if (difference > 0) {
@@ -43,7 +43,7 @@ export function CountdownTimer({ targetDate }) {
   });
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} suppressHydrationWarning>
       {!timeLeft.length ||
       (timeLeft[0].value <= 0 &&
         timeLeft[1].value <= 0 &&
@@ -54,7 +54,7 @@ export function CountdownTimer({ targetDate }) {
         <>
           <h3 className={styles.title}>20 ՕԳՈՍՏՈՍ 2024</h3>
           <p className={styles.desc}>մեր հարսանիքին մնացել է</p>
-          <div suppressHydrationWarning className={styles.container}>
+          <div className={styles.container}>
             {timeLeft.map((interval, index) => (
               <Fragment key={interval.text}>
                 <p className={styles.section}>
