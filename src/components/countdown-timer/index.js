@@ -5,15 +5,27 @@ import styles from "./index.module.css";
 
 const calculateTimeLeft = (targetDate) => {
   const difference = +new Date(targetDate) - +new Date();
-  let timeLeft = {};
+  let timeLeft = [];
 
   if (difference > 0) {
-    timeLeft = {
-      օր: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      ժամ: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      րոպե: Math.floor((difference / 1000 / 60) % 60),
-      վայրկյան: Math.floor((difference / 1000) % 60),
-    };
+    timeLeft = [
+      {
+        value: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        text: "օր",
+      },
+      {
+        value: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        text: "ժամ",
+      },
+      {
+        value: Math.floor((difference / 1000 / 60) % 60),
+        text: "րոպե",
+      },
+      {
+        value: Math.floor((difference / 1000) % 60),
+        text: "վայրկյան",
+      },
+    ];
   }
 
   return timeLeft;
@@ -33,18 +45,24 @@ export function CountdownTimer({ targetDate }) {
 
   return (
     <div className={styles.wrapper}>
-      {timeLeft["օր"] !== undefined ? (
+      {!timeLeft ||
+      (timeLeft[0].value <= 0 &&
+        timeLeft[1].value <= 0 &&
+        timeLeft[2].value <= 0 &&
+        timeLeft[3].value <= 0) ? (
+        <p className={styles.pass}>մեր հարսանիքի օրն արդեն անցել է</p>
+      ) : (
         <>
           <h3 className={styles.title}>20 ՕԳՈՍՏՈՍ 2024</h3>
           <p className={styles.desc}>մեր հարսանիքին մնացել է</p>
           <div suppressHydrationWarning className={styles.container}>
-            {keys.map((interval, index) => (
-              <Fragment key={interval}>
+            {timeLeft.map((interval, index) => (
+              <Fragment key={interval.text}>
                 <p className={styles.section}>
                   <span className={styles.number}>
-                    {timeLeft[interval] || "00"}
+                    {interval.value || "00"}
                   </span>
-                  <span className={styles.text}>{interval}</span>
+                  <span className={styles.text}>{interval.text}</span>
                 </p>
                 {index !== keys.length - 1 && (
                   <div className={styles.separator} />
@@ -53,8 +71,6 @@ export function CountdownTimer({ targetDate }) {
             ))}
           </div>
         </>
-      ) : (
-        <p className={styles.pass}>մեր հարսանիքի օրն արդեն անցել է</p>
       )}
     </div>
   );
