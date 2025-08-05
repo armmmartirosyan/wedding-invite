@@ -4,11 +4,10 @@ import { sendEmail } from "@/actions";
 import styles from "./index.module.css";
 import { useRef } from "react";
 import { LettersPullUp } from "../letters-pull-up";
-import { useFormStatus } from "react-dom";
+import { Button } from "./button";
 
 export function Form() {
   const formRef = useRef(null);
-  const { pending } = useFormStatus();
 
   const handleSubmit = async (formData) => {
     const invitedBy = formData.get("invitedBy") || "";
@@ -108,9 +107,7 @@ export function Form() {
         />
       </div>
 
-      <button className={styles.submit} type="submit" disabled={pending}>
-        Ուղարկել
-      </button>
+      <Button />
       <LettersPullUp duration={1} className={styles.happy_end}>
         Սիրով սպասում ենք Ձեզ
       </LettersPullUp>
