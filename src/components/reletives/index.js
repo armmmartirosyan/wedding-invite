@@ -6,7 +6,7 @@ import styles from "./index.module.css";
 
 export function Reletives() {
   return (
-    <section className={styles.reletives} id="reletives">
+    <section className={styles.reletives}>
       <h2 className={`heading ${styles.title}`}>Բարեկամներ և Ընկերներ</h2>
       <p className={`text ${styles.desc}`}>
         Մենք գտել ենք մեր հավերժական սերը և ուրախ կլինենք, եթե կիսեք մեզ հետ մեր
