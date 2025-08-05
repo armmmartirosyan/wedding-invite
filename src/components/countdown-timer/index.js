@@ -33,7 +33,6 @@ const calculateTimeLeft = (targetDate) => {
 
 export function CountdownTimer({ targetDate }) {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
-  const keys = Object.keys(timeLeft);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -45,7 +44,7 @@ export function CountdownTimer({ targetDate }) {
 
   return (
     <div className={styles.wrapper}>
-      {!timeLeft ||
+      {!timeLeft.length ||
       (timeLeft[0].value <= 0 &&
         timeLeft[1].value <= 0 &&
         timeLeft[2].value <= 0 &&
@@ -64,7 +63,7 @@ export function CountdownTimer({ targetDate }) {
                   </span>
                   <span className={styles.text}>{interval.text}</span>
                 </p>
-                {index !== keys.length - 1 && (
+                {index !== timeLeft.length - 1 && (
                   <div className={styles.separator} />
                 )}
               </Fragment>
