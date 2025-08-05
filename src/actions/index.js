@@ -27,7 +27,7 @@ export async function sendEmail({
     subject: "Responded to the invite.",
     text: nameSurname,
     html: `<div>Անուն՝ ${nameSurname}<br>Հրավիրված՝ ${invitedBy}ից<br>${willCome}${
-      willCome === "Մենք կգանք" && "՝ " + numberOfGuests
+      willCome === "Մենք կգանք" ? "՝ " + numberOfGuests : ""
     }</div>`,
   };
 

@@ -4,9 +4,11 @@ import { sendEmail } from "@/actions";
 import styles from "./index.module.css";
 import { useRef } from "react";
 import { LettersPullUp } from "../letters-pull-up";
+import { useFormStatus } from "react-dom";
 
 export function Form() {
   const formRef = useRef(null);
+  const { pending } = useFormStatus();
 
   const handleSubmit = async (formData) => {
     const invitedBy = formData.get("invitedBy") || "";
@@ -106,7 +108,7 @@ export function Form() {
         />
       </div>
 
-      <button className={styles.submit} type="submit">
+      <button className={styles.submit} type="submit" disabled={pending}>
         Ուղարկել
       </button>
       <LettersPullUp duration={1} className={styles.happy_end}>
