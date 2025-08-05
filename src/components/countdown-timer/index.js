@@ -44,7 +44,9 @@ export function CountdownTimer({ targetDate }) {
 
   return (
     <div className={styles.wrapper} suppressHydrationWarning>
-      <p className={styles.pass}>{JSON.stringify(timeLeft)}</p>
+      <p className={styles.pass}>
+        {JSON.stringify(timeLeft) + new Date(targetDate)}
+      </p>
       {/* {!timeLeft.length ||
       (timeLeft[0].value <= 0 &&
         timeLeft[1].value <= 0 &&
