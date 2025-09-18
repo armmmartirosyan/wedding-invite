@@ -41,10 +41,10 @@ export function Banner() {
         <source src="/song.mp3" type="audio/mp3" />
       </audio>
       <div />
-      <div>
+      <div className={styles.content}>
         <h1 className={`heading ${styles.title}`}>Gagik and Lusine</h1>
         <figure className={styles.images_block}>
-          <img src={"/b1.jpg"} className={styles.image} alt="They" />
+          {/* 
           <motion.div
             className={styles.container}
             {...slideIn({
@@ -55,21 +55,23 @@ export function Banner() {
               once: true,
             })}
           >
-            <img src={"/banner_2.jpg"} className={styles.image} alt="They" />
-          </motion.div>
-          <img src={"/b3.jpg"} className={styles.image} alt="They" />
+            <img src={"/one2.jpg"} className={styles.image} alt="They" />
+          </motion.div> */}
+          <img src={"/one11.jpg"} className={styles.banner_image} alt="They" />
         </figure>
-        <div className={styles.invite_wrapper}>
-          <LettersPullUp duration={0.9} className={`text ${styles.invite}`}>
-            հԱՐՍԱՆՅԱՑ ՀՐԱՎԵՐ
-          </LettersPullUp>
+        <div className={styles.bottom_info}>
+          <div className={styles.invite_wrapper}>
+            <LettersPullUp duration={0.9} className={`text ${styles.invite}`}>
+              ՍԻՐՈՎ ՀՐԱՎԻՐՈՒՄ ԵՆՔ
+            </LettersPullUp>
+          </div>
+          <FontAwesomeIcon
+            icon={isPlaying ? faCirclePause : faCirclePlay}
+            className={styles.play}
+            onClick={handleScroll}
+          />
         </div>
       </div>
-      <FontAwesomeIcon
-        icon={isPlaying ? faCirclePause : faCirclePlay}
-        className={styles.play}
-        onClick={handleScroll}
-      />
     </section>
   );
 }

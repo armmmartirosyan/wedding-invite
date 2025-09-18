@@ -43,7 +43,7 @@ export function Form() {
       <h3 className={styles.title}>
         Խնդրում ենք հաստատել Ձեր ներկայությունը միջոցառմանը
         <br />
-        մինչև 15․08․2025
+        մինչև 10․10․2025
       </h3>
       <div className={styles.radio_wrapper}>
         <input
