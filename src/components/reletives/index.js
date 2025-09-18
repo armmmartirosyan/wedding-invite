@@ -15,7 +15,7 @@ export function Reletives() {
       <p className={`text ${styles.desc2}`}>
         Սիրով հրավիրում ենք Ձեզ մեր հարսանիքին։
       </p>
-      <p className={`heading ${styles.date}`}>20.08.2025</p>
+      <p className={`heading ${styles.date}`}>22.10.2025</p>
       <figure className={styles.image_box}>
         <motion.div
           className={styles.container}

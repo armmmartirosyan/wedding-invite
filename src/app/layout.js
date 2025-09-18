@@ -2,7 +2,7 @@ import { classNames } from "@/fonts";
 import "@/styles/globals.css";
 
 export const metadata = {
-  title: "Vahan & Mariam",
+  title: "Gagik & Lusine",
   description: "Inviting you for the most important date of this year.",
 };
 

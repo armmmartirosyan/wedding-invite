@@ -52,7 +52,7 @@ export function CountdownTimer({ targetDate }) {
         <p className={styles.pass}>մեր հարսանիքի օրն արդեն անցել է</p>
       ) : (
         <>
-          <h3 className={styles.title}>20 ՕԳՈՍՏՈՍ 2025</h3>
+          <h3 className={styles.title}>22 ՀՈԿՏԵՄԲԵՐ 2025</h3>
           <p className={styles.desc}>մեր հարսանիքին մնացել է</p>
           <div className={styles.container}>
             {timeLeft.map((interval, index) => (

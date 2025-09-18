@@ -42,7 +42,7 @@ export function Banner() {
       </audio>
       <div />
       <div>
-        <h1 className={`heading ${styles.title}`}>Vahan and Mariam</h1>
+        <h1 className={`heading ${styles.title}`}>Gagik and Lusine</h1>
         <figure className={styles.images_block}>
           <img src={"/b1.jpg"} className={styles.image} alt="They" />
           <motion.div
