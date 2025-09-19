@@ -30,6 +30,11 @@
   flex-wrap: wrap;
 }
 
+.radio_group {
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
 .radio_label {
   color: var(--foreground);
   text-align: center;
@@ -105,10 +110,13 @@
     color: #7f7f7f;
   }
 
-  margin: 5rem 0;
+  margin-bottom: 5rem;
 }
 
-.radio_wrapper:nth-last-child(3) > .radio[type="radio"]:checked ~ .input {
+.radio_group:nth-child(4):has(
+    .radio_wrapper:nth-last-child(1) > .radio[type="radio"]:checked
+  )
+  ~ .input {
   display: none;
 }
 

@@ -43,7 +43,7 @@ export function CountdownTimer({ targetDate }) {
   });
 
   return (
-    <div className={styles.wrapper} suppressHydrationWarning id="reletives">
+    <div className={styles.wrapper} suppressHydrationWarning>
       {!timeLeft.length ||
       (timeLeft[0].value <= 0 &&
         timeLeft[1].value <= 0 &&

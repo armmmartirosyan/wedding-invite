@@ -43,67 +43,72 @@ export function Form() {
       <h3 className={styles.title}>
         Խնդրում ենք հաստատել հարսանյաց արարողությանը Ձեր ներկայությունը
       </h3>
-      <div className={styles.radio_wrapper}>
-        <input
-          type="radio"
-          id="wife"
-          name="invitedBy"
-          value="Հարսի կողմ"
-          className={styles.radio}
-        />
-        <label htmlFor="wife" className={styles.radio_label}>
-          Հարսի կողմ
-        </label>
-      </div>
-      <div className={styles.radio_wrapper}>
-        <input
-          type="radio"
-          id="fiance"
-          name="invitedBy"
-          value="Փեսայի կողմ"
-          className={styles.radio}
-        />
-        <label htmlFor="fiance" className={styles.radio_label}>
-          Փեսայի կողմ
-        </label>
-      </div>
       <input
         name="nameSurname"
         type="text"
         className={styles.input}
         placeholder="Անուն Ազգանուն"
       />
-      <div className={styles.radio_wrapper}>
-        <input
-          type="radio"
-          id="willCome"
-          name="willCome"
-          value="Մենք կգանք"
-          className={styles.radio}
-          defaultChecked
-        />
-        <label htmlFor="willCome" className={styles.radio_label}>
-          Մենք կգանք
-        </label>
+      <div className={styles.radio_group}>
+        <div className={styles.radio_wrapper}>
+          <input
+            type="radio"
+            id="wife"
+            name="invitedBy"
+            value="Հարսի կողմ"
+            className={styles.radio}
+          />
+          <label htmlFor="wife" className={styles.radio_label}>
+            Հարսի կողմ
+          </label>
+        </div>
+        <div className={styles.radio_wrapper}>
+          <input
+            type="radio"
+            id="fiance"
+            name="invitedBy"
+            value="Փեսայի կողմ"
+            className={styles.radio}
+          />
+          <label htmlFor="fiance" className={styles.radio_label}>
+            Փեսայի կողմ
+          </label>
+        </div>
       </div>
-      <div className={styles.radio_wrapper}>
-        <input
-          type="radio"
-          id="cant-come"
-          name="willCome"
-          value="Չենք կարող գալ ։("
-          className={styles.radio}
-        />
-        <label htmlFor="cant-come" className={styles.radio_label}>
-          Չենք կարող գալ ։(
-        </label>
-        <input
-          name="numberOfGuests"
-          type="number"
-          className={styles.input}
-          placeholder="Հյուրերի թիվ"
-        />
+      <div className={styles.radio_group}>
+        <div className={styles.radio_wrapper}>
+          <input
+            type="radio"
+            id="willCome"
+            name="willCome"
+            value="Մենք կգանք"
+            className={styles.radio}
+            defaultChecked
+          />
+          <label htmlFor="willCome" className={styles.radio_label}>
+            Մենք կգանք
+          </label>
+        </div>
+        <div className={styles.radio_wrapper}>
+          <input
+            type="radio"
+            id="cant-come"
+            name="willCome"
+            value="Չենք կարող գալ ։("
+            className={styles.radio}
+          />
+          <label htmlFor="cant-come" className={styles.radio_label}>
+            Չենք կարող գալ ։(
+          </label>
+        </div>
       </div>
+
+      <input
+        name="numberOfGuests"
+        type="number"
+        className={styles.input}
+        placeholder="Հյուրերի թիվ"
+      />
 
       <Button />
       <LettersPullUp duration={1} className={styles.happy_end}>
