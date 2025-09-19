@@ -8,7 +8,7 @@ export default function Home() {
       <main className={styles.wrapper}>
         <Banner />
       </main>
-      <main className={`${styles.wrapper} ${styles.scrollable}`}>
+      <main className={styles.wrapper}>
         <Reletives />
         <CountdownTimer targetDate={new Date(2025, 9, 22)} />
         <DayPlan />
