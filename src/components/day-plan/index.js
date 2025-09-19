@@ -14,7 +14,7 @@ export function DayPlan() {
       <motion.div
         className={styles.banner}
         {...slideIn({
-          direction: "right",
+          direction: "left",
           delay: 0.1,
           duration: 0.3,
           once: false,
