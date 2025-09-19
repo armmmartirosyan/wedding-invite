@@ -7,15 +7,10 @@ import styles from "./index.module.css";
 export function Reletives() {
   return (
     <section className={styles.reletives}>
-      <h2 className={`heading ${styles.title}`}>Բարեկամներ և Ընկերներ</h2>
-      <p className={`text ${styles.desc}`}>
-        Մենք գտել ենք մեր հավերժական սերը և ուրախ կլինենք, եթե կիսեք մեզ հետ մեր
-        լուսավոր օրը։
-      </p>
+      <h2 className={`heading ${styles.title}`}>Ընկերներ և Բարեկամներ</h2>
       <p className={`text ${styles.desc2}`}>
         Սիրով հրավիրում ենք Ձեզ մեր հարսանիքին։
       </p>
-      <p className={`heading ${styles.date}`}>22.10.2025</p>
       <figure className={styles.image_box}>
         <motion.div
           className={styles.container}

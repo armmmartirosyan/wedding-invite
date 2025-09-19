@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { slideIn } from "@/utils";
+import { blurIn } from "@/utils";
 import styles from "./index.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePause, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
@@ -42,23 +42,21 @@ export function Banner() {
       </audio>
       <div />
       <div className={styles.content}>
-        <h1 className={`heading ${styles.title}`}>Gagik and Lusine</h1>
-        <figure className={styles.images_block}>
-          {/* 
-          <motion.div
-            className={styles.container}
-            {...slideIn({
-              direction: "down",
-              type: "spring",
-              delay: 0,
-              duration: 0.8,
-              once: true,
-            })}
-          >
-            <img src={"/one2.jpg"} className={styles.image} alt="They" />
-          </motion.div> */}
+        <h1 className={`heading ${styles.title}`}>Գագիկ & Լուսինե</h1>
+
+        <motion.figure
+          className={styles.images_block}
+          {...blurIn({
+            direction: "down",
+            type: "spring",
+            delay: 0,
+            duration: 0.5,
+            once: true,
+          })}
+        >
           <img src={"/one11.jpg"} className={styles.banner_image} alt="They" />
-        </figure>
+        </motion.figure>
+
         <div className={styles.bottom_info}>
           <div className={styles.invite_wrapper}>
             <LettersPullUp duration={0.9} className={`text ${styles.invite}`}>

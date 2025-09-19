@@ -41,9 +41,7 @@ export function Form() {
   return (
     <form ref={formRef} action={handleSubmit} className={styles.form}>
       <h3 className={styles.title}>
-        Խնդրում ենք հաստատել Ձեր ներկայությունը միջոցառմանը
-        <br />
-        մինչև 10․10․2025
+        Խնդրում ենք հաստատել հարսանյաց արարողությանը Ձեր ներկայությունը
       </h3>
       <div className={styles.radio_wrapper}>
         <input

@@ -11,6 +11,17 @@ const heghnar = localFont({
   variable: "--font-heghnar",
 });
 
+const imperialScript = localFont({
+  src: [
+    {
+      path: "./imperial-script.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-imperial-script",
+});
+
 const tangerine = localFont({
   src: [
     {
@@ -60,8 +71,9 @@ const montserrat = localFont({
 
 const classNames = [
   heghnar.variable,
+  imperialScript.variable,
   montserrat.variable,
   tangerine.variable,
 ].join(" ");
 
-export { classNames, heghnar };
+export { classNames, heghnar, imperialScript };

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, Fragment } from "react";
+import { useState, useEffect, Fragment } from "react";
 import styles from "./index.module.css";
 
 const calculateTimeLeft = (targetDate) => {

@@ -3,3 +3,11 @@
   max-width: 100%;
   margin: 0 auto;
 }
+
+.reletives_section {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
