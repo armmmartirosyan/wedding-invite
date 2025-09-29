@@ -3,6 +3,8 @@
 import { useState, useEffect, Fragment } from "react";
 import styles from "./index.module.css";
 
+const targetDate = new Date(2025, 9, 22);
+
 const calculateTimeLeft = (targetDate) => {
   const difference = new Date(targetDate) - new Date();
   let timeLeft = [];
@@ -31,8 +33,27 @@ const calculateTimeLeft = (targetDate) => {
   return timeLeft;
 };
 
-export function CountdownTimer({ targetDate }) {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
+export function CountdownTimer() {
+  const [timeLeft, setTimeLeft] = useState(
+    calculateTimeLeft([
+      {
+        value: 0,
+        text: "օր",
+      },
+      {
+        value: 0,
+        text: "ժամ",
+      },
+      {
+        value: 0,
+        text: "րոպե",
+      },
+      {
+        value: 0,
+        text: "վայրկյան",
+      },
+    ])
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {

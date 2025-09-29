@@ -3,6 +3,7 @@ import { Banner, CountdownTimer, DayPlan, Form, Reletives } from "@/components";
 import styles from "@/styles/page.module.css";
 
 export default function Home() {
+  const date = new Date(2025, 9, 22);
   return (
     <div className={styles.page}>
       <main className={styles.wrapper}>
@@ -10,7 +11,7 @@ export default function Home() {
       </main>
       <main className={styles.wrapper}>
         <Reletives />
-        <CountdownTimer targetDate={new Date(2025, 9, 22)} />
+        <CountdownTimer />
         <DayPlan />
         <Form />
       </main>
