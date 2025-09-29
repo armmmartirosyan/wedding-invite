@@ -34,7 +34,7 @@ export function DayPlan() {
             </div>
           </div>
           <p className={styles.name}>
-            Սուրբ&nbsp;&nbsp;Ամենափրկիչ&nbsp;&nbsp;Վերք&nbsp;&nbsp;Եկեղեցի
+            Սուրբ&nbsp;&nbsp;Ամենափրկիչ&nbsp;&nbsp;Եկեղեցի
           </p>
           <motion.div {...opacityScale({ duration: 0.5, once: false })}>
             <img
