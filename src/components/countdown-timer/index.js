@@ -3,10 +3,8 @@
 import { useState, useEffect, Fragment } from "react";
 import styles from "./index.module.css";
 
-const targetDate = new Date(2025, 9, 22);
-
-const calculateTimeLeft = (targetDate) => {
-  const difference = new Date(targetDate) - new Date();
+const calculateTimeLeft = () => {
+  const difference = new Date(2025, 9, 22) - new Date();
   let timeLeft = [];
 
   if (difference > 0) {
@@ -57,7 +55,7 @@ export function CountdownTimer() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft(targetDate));
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearTimeout(timer);
