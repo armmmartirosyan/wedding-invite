@@ -54,7 +54,7 @@ export function Banner() {
             once: true,
           })}
         >
-          <img src={"/new11.jpg"} className={styles.banner_image} alt="They" />
+          <img src={"/new4.jpg"} className={styles.banner_image} alt="They" />
         </motion.figure>
 
         <div className={styles.bottom_info}>
