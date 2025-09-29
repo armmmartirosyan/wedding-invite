@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { LettersPullUp } from "@/components/letters-pull-up";
 import Link from "next/link";
 import styles from "./index.module.css";
-import { opacityScale, slideIn } from "@/utils";
+import { opacityScale } from "@/utils";
 
 export function DayPlan() {
   return (
