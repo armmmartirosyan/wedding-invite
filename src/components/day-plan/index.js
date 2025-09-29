@@ -12,7 +12,6 @@ export function DayPlan() {
       <h2 className={styles.title}>Օրվա ծրագիրը</h2>
       {/* Ekexeci */}
       <motion.div
-        className={styles.banner}
         {...slideIn({
           direction: "left",
           delay: 0.1,
@@ -21,27 +20,28 @@ export function DayPlan() {
         })}
       >
         <Link
-          href="https://maps.app.goo.gl/mwy6Cvh6JYTyFZFX7"
+          href="https://maps.app.goo.gl/Sxjap4FNZQDpx2nH6"
           target="_blank"
           className={styles.wrapper}
         >
           <div className={styles.place_info_wrapper}>
             <img src="/church.svg" alt="Church" className={styles.image} />
             <div className={styles.place_info_box}>
-              <p className={styles.time}>14:00</p>
+              <p className={styles.time}>15:00</p>
               <LettersPullUp duration={0.7} className={styles.place_name}>
                 ՊՍԱԿԱԴՐՈՒԹՅՈՒՆ
               </LettersPullUp>
             </div>
           </div>
           <p className={styles.name}>
-            Սուրբ&nbsp;&nbsp;Յոթ&nbsp;&nbsp;Վերք&nbsp;&nbsp;Եկեղեցի
+            Սուրբ&nbsp;&nbsp;Ամենափրկիչ&nbsp;&nbsp;Վերք&nbsp;&nbsp;Եկեղեցի
           </p>
-          <motion.div
-            className={styles.banner}
-            {...opacityScale({ duration: 0.5, once: false })}
-          >
-            <img src="/7verk.jpg" alt="Church" className={styles.place_img} />
+          <motion.div {...opacityScale({ duration: 0.5, once: false })}>
+            <img
+              src="/amenaprkich.png"
+              alt="Church"
+              className={styles.place_img}
+            />
           </motion.div>
           <p className={styles.address}>Գյումրի, Վարդանանց հրապարակ</p>
         </Link>
@@ -49,7 +49,6 @@ export function DayPlan() {
 
       {/* Restoran */}
       <motion.div
-        className={styles.banner}
         {...slideIn({
           direction: "left",
           delay: 0.1,
