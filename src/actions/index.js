@@ -23,7 +23,7 @@ export async function sendEmail({
 
   const mailData = {
     from: "'Responded to the invite' <armenmartirosyan020@gmail.com>",
-    to: "manager.contact@mail.ru",
+    to: "contactmanager001@gmail.com",
     subject: "Responded to the invite.",
     text: nameSurname,
     html: `<div>Անուն՝ ${nameSurname}<br>Հրավիրված՝ ${invitedBy}ից<br>${willCome}${
