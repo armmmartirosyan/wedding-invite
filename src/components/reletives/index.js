@@ -22,7 +22,7 @@ export function Reletives() {
           className={styles.container}
           {...opacityScale({ duration: 0.5, once: false })}
         >
-          <img src={"/new1.jpg"} className={styles.image} alt="They" />
+          <img src={"/new3.jpg"} className={styles.image} alt="They" />
         </motion.div>
       </figure>
     </section>
